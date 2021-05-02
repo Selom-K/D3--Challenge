@@ -79,3 +79,14 @@ chartGroup.append("text")
 .text(function(data) {
     return data.abbr
 });
+
+// Building tooltips for the chart
+var toolTip = d3.tip()
+.attr("class", "tooltip")
+.offset([-10, 30])
+.style("position", "absolute")
+.style("background", "lightsteelblue")
+.style("pointer-events", "none")
+.html(function(d) {
+    return (`${d.state}<br>Population In Poverty (%): ${d.poverty}<br>Lacks Healthcare (%): ${d.healthcare}`)
+});  
