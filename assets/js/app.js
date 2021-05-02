@@ -105,15 +105,15 @@ circlesGroup.on("mouseover", function(data) {
 // Axis labels
 chartGroup.append("text")
 .attr("transform", "rotate(-90)")
-.attr("y", 0 - margin.left) //-5
-.attr("x", 0 - (height / 2)) // 2
+.attr("y", 0 - margin.left) 
+.attr("x", 0 - (height / 2)) 
 .attr("dy", "1em")
-.classed("aText", "True") // .attr("class", "axisText")
+.classed("aText", "True") 
 .text("Lacks Healthcare (%)");
 
 chartGroup.append("text")
 .attr("transform", `translate(${width / 2.5}, ${height + margin.top + 30})`)
-.classed("aText", "True") // .attr("class", "axisText")
+.classed("aText", "True") 
 .text("In Poverty (%)");
 
 });
