@@ -61,3 +61,21 @@ var circlesGroup = chartGroup.selectAll("circle")
 .attr("fill", "blue")
 .attr("opacity", ".4")
 .attr("stroke", "white");  
+
+chartGroup.append("text")
+.style("text-anchor", "middle")
+.style("font-family", "arial")
+.style("font-size", "10")
+.selectAll("tspan")
+.data(stateData)
+.enter()
+.append("tspan")
+.attr("x", function(data) {
+    return xLinearScale(data.poverty);
+})
+.attr("y", function(data) {
+    return yLinearScale(data.healthcare -.028);
+})
+.text(function(data) {
+    return data.abbr
+});
