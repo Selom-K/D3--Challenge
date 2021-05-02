@@ -39,4 +39,15 @@ var yLinearScale = d3.scaleLinear()
 .domain([4, d3.max(stateData, d => d.healthcare)])
 .range([height, 0]);
 
+// Updating axis functions
+var bottomAxis = d3.axisBottom(xLinearScale);
+var leftAxis = d3.axisLeft(yLinearScale);  
+
+chartGroup.append("g")
+.attr("transform", `translate(0, ${height})`)
+.call(bottomAxis);
+
+chartGroup.append("g")
+.call(leftAxis);
+
 
