@@ -92,3 +92,12 @@ var toolTip = d3.tip()
 });  
 chartGroup.call(toolTip);
 
+// onmouseover event
+circlesGroup.on("mouseover", function(data) {
+    toolTip.show(data, this);
+})
+
+// onmouseout event
+.on("mouseout", function(data, index) {
+    toolTip.hide(data);
+});
