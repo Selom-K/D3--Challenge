@@ -22,4 +22,12 @@ var svg = d3
   var chartGroup = svg.append("g")
   .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
+    // Importing csv file
+d3.csv("/assets/data/data.csv").then(function(stateData) {
+    // console.log(stateData);
+    stateData.forEach(function(data) {
+        data.poverty = +data.poverty;
+        data.healthcare = +data.healthcare;
+  });
+
 
