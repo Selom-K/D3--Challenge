@@ -90,3 +90,5 @@ var toolTip = d3.tip()
 .html(function(d) {
     return (`${d.state}<br>Population In Poverty (%): ${d.poverty}<br>Lacks Healthcare (%): ${d.healthcare}`)
 });  
+chartGroup.call(toolTip);
+
